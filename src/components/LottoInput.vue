@@ -1,6 +1,6 @@
 <template>
   <div class="inputBox shadow">
-    <input type="text" v-model="weeks" placeholder="Type weeks you want to do" v-on:keyup.enter="addTodo">
+    <input type="text" v-model="weeks" placeholder=" Type weeks" v-on:keyup.enter="setWeeks">
     <span class="addContainer" v-on:click="setWeeks">
       <i class="addBtn fas fa-plus" aria-hidden="true"></i>
     </span>
@@ -50,35 +50,27 @@ input:focus{
 }
 .inputBox{
   position: absolute;
-  width: 184px;
+  width: 183px;
   height: 35px;
-  left: 54px;
-  top: 102px;
+  left: 96px;
+  top: 101px;
+
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .inputBox input{
   border-style: none;
-  font-size:0.9rem;
-  position: absolute;
-  width: 97px;
-  height: 29px;
-  left: 223px;
-  top: 108px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 14px;
-  text-align: center;
-
-  color: #000000;
+  font-size: 0.9rem;
 }
 .addContainer{
-  float:right;
-  background:linear-gradient(to right, #6478fb, #8763fb);
-  display:block;
-  width:3rem;
+  position:fixed;
+  width: 37px;
+  height: 35px;
+  left: 242px;
+  top: 99px;
+
+  background: linear-gradient(to right, #FF99aa, #FE3394);
+  display: block;
   border-radius:0 5px 5px 0;
 }
 .addBtn{

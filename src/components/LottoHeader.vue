@@ -1,8 +1,8 @@
 <template>
   <header>
-    <h1>Teolbo Lotto</h1>
-    <h2>By which weeks of previous lotto winning number
-do you want to know?</h2>
+    <span class="lottoTitle">Teolbo Lotto</span>
+    <span class="question">By which weeks of previous lotto winning number
+do you want to know?</span>
   </header>
 </template>
 
@@ -12,8 +12,8 @@ export default{
 }
 </script>
 
-<style>
-  h1{
+<style scoped>
+  .lottoTitle{
     /* Teolbo Lotto */
     position: absolute;
     width: 73px;
@@ -26,19 +26,17 @@ export default{
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
-    text-align: center;
-
+    text-align: right;
     color: #128C7E;
 
-  },
-  t1{
+  }
+  .question{
   /* Frame 2 */
     position: absolute;
     width: 336px;
     height: 43px;
     left: 19px;
     top: 43px;
-
   }
 
 </style>

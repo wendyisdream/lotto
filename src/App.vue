@@ -1,11 +1,13 @@
+
 <template>
   <div id="app">
     <LottoHeader></LottoHeader>
     <LottoInput v-on:getWinningNumber="getWinningNumber"></LottoInput>
-    <LottoResult v-bind:propsdata="winningNumTimes"></LottoResult>
+    <LottoResult v-bind:propsdata="winningNumList"></LottoResult>
     <LottoSummary v-bind:propsdata="winningNumTimes"></LottoSummary>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -25,6 +27,11 @@ export default {
   methods:{
     getWinningNumber(weeks){
       /* update winningNumTimes and winningNumList */
+      console.log(weeks);
+      axios.get('https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1000')
+      .then(function(response){
+        console.log(response);
+      });
     }
   },
   created(){
@@ -35,7 +42,7 @@ import LottoHeader from './components/LottoHeader.vue'
 import LottoInput from './components/LottoInput.vue'
 import LottoResult from './components/LottoResult.vue'
 import LottoSummary from './components/LottoSummary.vue'
-
+import axios from "axios";
 </script>
 
 <style>
